@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - ITER Robot CPP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='index.info.js' async></script>
+    <link rel="icon" href="logocpp.jpeg" type="image/x-icon">
+
+
+
+</head>
+<body class="page-transition">
+    <div class="nav">
+    <nav>
+    <a href="#">Menu</a> 
+    <a href="info.html">Informations</a> 
+    <a href="autre.html">Autre</a> 
+    <a href="Listerepertoir.html">Qui fait quoi ?</a>  
+    <a href="Vidéos.html">Vidéos</a> 
+    </nav>
+    </div>
+    <h2 class="title" >Bienvenue <span id="output"></span> ! <center>Site web du Collège Le Petit Prince - Iter Robot</center></h2><br><br>
+     <div class="button-container">
+   <button class="btn3" id="partieR" onclick="redirectToSite(this.id)"><h1>Partie Robotique</h1></button>    
+   <button class="btn3" id="partieC" onclick="redirectToSite(this.id)"><h1>Partie Communication</h1></button>
+        
+    
+        <button class="btn3" id="CDC2024" onclick="redirectToSite(this.id)" ><h1>Cahier des Charges 2024</h1></button>
+        <button disabled class="btn3-disabled" id="CDC-2025" onclick="redirectToSite(this.id)" title="NON DISPONIBLE POUR L'INSTANT" ><h1>Cahier des Charges 2025</h1></button>
+        <button class="btn3" id="dates2024" onclick="redirectToSite(this.id)"><h1>Dates du concours</h1></button>
+        <button class="btn3" id="espP" onclick="redirectToSite(this.id)"><h1>Espaces personnels</h1><br><h6>(connection requise)</h6></button>
+        <button class="btn3" id="questionsculture" onclick="redirectToSite(this.id)"><h1>Questions-réponses culture générale 2024</h1></button>
+        <button class="btn3" id="chamilo" onclick="redirectToSite(this.id)"><h1>"Iter Robots" sur Chamilo</h1></button>
+        <button class="btn3" id="revueprojet" onclick="redirectToSite(this.id)"><h1>Diaporama - Revue de PROJET</h1></button>
+</div>
+
+
+
+
+<br><br><br><br>
+    <a href="https://www.site.ac-aix-marseille.fr/clg-petitprince/spip/Le-concours-de-robotique-ITER-2017.html" target="_blank">Iter Robot 2017</a>/ 
+    <a href="images.html">Images</a> /
+    <a href="Contact.html">Contact</a> /
+    <a href="espaces personnels.html">Espaces personnels</a> / 
+    <a href="questionnaire.html">Questionnaire</a>
+    <br><br><br><br>
+    
+
+
+
+
+
+
+
+
+
+<script> function saveData() { var inputValue = document.getElementById('inputField').value; localStorage.setItem('name', inputValue); document.getElementById('output').textContent = localStorage.getItem('name'); } document.getElementById('output').textContent = localStorage.getItem('name'); </script> 
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const buttons = document.querySelectorAll(".btn3");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function(event) {
+                event.preventDefault();
+                const targetId = this.id;
+                document.body.classList.add("fade-out");
+
+                setTimeout(() => {
+                    redirectToSite(targetId);
+                }, 500); // Durée de la transition en millisecondes
+            });
+        });
+    });
+
+  function redirectToSite(buttonId) {
+  var siteUrl;
+  var openInNewTab = false; // Par défaut, n'ouvre pas dans un nouvel onglet
+
+  switch (buttonId) {
+    case "CDC2024":
+      siteUrl = "CDC-2024.pdf";
+      openInNewTab = true; // Ouvre ce lien dans un nouvel onglet
+      break;
+    case "CDC2025":
+      siteUrl = "????.html";
+      openInNewTab = true; // Ouvre ce lien dans un nouvel onglet
+      break;
+    case "dates2024":
+      siteUrl = "Dates-du-concours-ITER-Robot2024.docx";
+      break;
+    case "partieR":
+      siteUrl = "Partie Robotique.html";
+      break;
+    case "partieC":
+      siteUrl = "Partie Communication.html";
+      break;
+    case "espP":
+      siteUrl = "espaces personnels.html";
+      break;
+    case "questionsculture":
+      siteUrl = "Questions-reponses-culture-generale-2024.pdf";
+      break;
+    case "chamilo":
+      siteUrl = "https://www.clg-petitprince.ac-aix-marseille.fr/chamilo/main/group/group_space.php?cidReq=ATELIERTECHNO1516FH&id_session=0&gradebook=0&origin=&gidReq=80175";
+      openInNewTab = true; // Ouvre ce lien dans un nouvel onglet
+      break;
+    case "revueprojet":
+      siteUrl = "Projet ITER revue de projet.pptx";
+      break;
+     default:
+      // Cas par défaut si l'ID du bouton n'est pas reconnu
+      return;
+
+
+}
+
+if (openInNewTab) {
+    window.open(siteUrl, '_blank');
+  } 
+else {
+    window.location.href = siteUrl;
+  }
+}
+
+</script>
+
+
+
+</body>
+</html>

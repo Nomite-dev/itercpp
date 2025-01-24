@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(152, 217, 236);
+}
+nav {
+    margin-left: 200px;
+}
+nav a{
+margin-right: 10px;
+font-size: 21px;
+}
+.vid{
+    font-size: 21px;
+}
+a{
+    text-decoration: yellow;
+    color: rgb(253, 9, 9);
+}
+p{
+    font-size: 20px;
+}
+li{
+    font-size: 20px;
+    color: rgb(30, 39, 20);
+}
+button{
+    color: rgb(62, 145, 160);
+    background-color: rgb(62, 201, 201)
+}
+h1{
+color: rgb(37, 58, 44);
+}

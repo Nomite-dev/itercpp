@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations - ITER Robot CPP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logocpp.jpeg" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Menu</a>
+        <a href="#">Informations</a>
+        <a href="autre.html">Autre</a>
+        <a href="Listerepertoir.html">Qui fait quoi ?</a>
+        <a href="Vidéos.html">Vidéos</a>
+    </nav>
+    <h1 id="h1_1" >Informations</h1>
+    <p id="p1" >Ce site web à été créer par des élèves du Collège Le Petit Prince participants à <em>Iter Robot</em> en HTML, en CSS et en JAVA SCRIPT.</p>
+    <h2><em id="infos" >⚠ SITE NON DISPONIBLE ! EN COURS DE MODIFICATION... ⚠</em></h2>    <button id="myButton"><a><span id="btnpartie" > Aller à la partie "Qui fait quoi ?" </span></a></button>
+<br>
+    <script>
+        document.getElementById("myButton").onclick = function() {
+            var name = prompt("Quel est votre nom?");
+            if (name) {
+                alert("Bonjour " + name + " ! Bienvenue ! \nSi vous êtes élèves de l'Atelier de Technologie au Collège Le Petit Prince, vous trouverez votre nom dans la liste \"Qui fait quoi ?\". \nSi vous ne trouvez pas votre nom dans la liste, merci de me prévenir à l'adresse : nomite09@gmail.com ");
+                window.location.href = "listerepertoir.html";
+            }
+        };
+    </script>
+
+    <br>
+    <fieldset>
+        <legend id="qui" >Qui êtes vous ?</legend>
+        <p>
+            <label class="radio-container">
+                <input class="checkmark" onclick="alert('Vous êtes déjà sur l\'espace élève !')" type="radio" name="option" value="regular" checked /><span id="eleve" >Eleve</span>
+            <span class="checkmark"></span>
+</label>
+        </p>
+        <p>
+            <label class="radio-container">
+                <input class="checkmark" onclick="rediriger('dev.html')" type="radio" name="option" value="regular" /><span id="dev" >Développeurs site</span>
+            <span class="checkmark"></span>
+</label>
+        </p>
+        <p>
+            <label class="radio-container">
+                <input class="checkmark" onclick="alert('Le bouton ITER Robot n\'est pas encore disponible !'); rediriger('info.html'); " type="radio" name="option" /> Iter Robot
+            <span class="checkmark"></span>
+</label>
+            <script>
+                function showAlert() {
+                    alert('Le bouton ITER Robot n\'est pas encore disponible !');
+                }
+            </script>
+        </p>
+    </fieldset>
+ 
+    <br><h3 id="nom" >Modifier votre nom :</h3>  <input type="text" id="inputField" class="input-text" placeholder="Entrer votre nom" /> 
+    <button id="saveButton" class="btn-google" onclick="saveData()">Save</button> 
+    <br><a id="nameis"><span id="nomest">Votre nom est : </span><span id="output"></span></a>
+    <script> function saveData() { var inputValue = document.getElementById('inputField').value; localStorage.setItem('name', inputValue); document.getElementById('output').textContent = localStorage.getItem('name'); } document.getElementById('output').textContent = localStorage.getItem('name'); </script>
+    <br><br><button onclick="confirmDeconnexion()" class="btn btn-logout"><span id="déco" >Déconnexion</span></button>
+    <br><h2 id="langues" >Langue :</h2>
+    <input type="button" id="Français" value="Français">
+    <input type="button" id="Englich" value="Englich">
+    <br><br><br> <span id="versionsite" > Version du site : </span> <span> 4.0 </span>
+    <br><br><button onclick="alert('Version du site : 4.0')"><a><span id="testversion" >Tester la version du site</span></a></button>
+    
+    <script>
+        function confirmDeconnexion() {
+            var confirmDeconnexion = confirm("Êtes-vous sûr de vouloir vous déconnecter ?");
+            if (confirmDeconnexion) {
+                window.location.href = "Acceuil - Plateforme de bienvenue.html";
+            }
+        }
+        
+        function saveData() {
+            var inputValue = document.getElementById('inputField').value;
+            localStorage.setItem('name', inputValue);
+            document.getElementById('output').textContent = localStorage.getItem('name');
+        }
+    </script>
+
+    <script>
+        localStorage.setItem('donneesUtilisateur', JSON.stringify(donnees));
+        alert('Données enregistrées avec succès !');
+    </script>
+
+<script>
+function mod() {
+    document.querySelector("#Français").innerHTML = "click";
+    document.querySelector("#p1").innerHTML = "Ce site web à été créer par des élèves du Collège Le Petit Prince participants à <em>Iter Robot</em> en HTML, en CSS et en JAVA SCRIPT.";
+    document.querySelector("#h1_1").innerHTML = "Informations";
+    document.querySelector("#langues").innerHTML = "Langue :";
+    document.querySelector("#qui").innerHTML = "Qui êtes vous ?";
+    document.querySelector("#nom").innerHTML = "Modifier votre nom :";
+    document.querySelector("#nomest").innerHTML = "Votre nom est : ";
+    document.querySelector("#eleve").innerHTML = "Eleve";
+    document.querySelector("#dev").innerHTML = "Développeurs site";
+    document.querySelector("#infos").innerHTML = "⚠ SITE NON DISPONIBLE ! EN COURS DE MODIFICATION... ⚠";
+    document.querySelector("#btnpartie").innerHTML = "Aller à la partie \"Qui fait quoi ?\" ";
+    document.querySelector("#testversion").innerHTML = "Tester la version du site";
+    document.querySelector("#versionsite").innerHTML = "Version du site :";
+    document.querySelector("#créerpar").innerHTML = "Créer par : ";
+    document.querySelector("#déco").innerHTML = "Déconnexion";
+    document.querySelector("#").innerHTML = "";
+    document.querySelector("#").innerHTML = "";
+    document.querySelector("#").innerHTML = "";
+    document.querySelector("#").innerHTML = "";
+
+}
+
+
+function unmod() {
+    document.querySelector("#Englich").innerHTML = "click";
+    document.querySelector("#p1").innerHTML = "This website was created by students from Collège Le Petit Prince taking part in <em>Iter Robot</em> using HTML, CSS and JAVA SCRIPT.";
+    document.querySelector("#h1_1").innerHTML = "Information";
+    document.querySelector("#langues").innerHTML = "Language :";
+    document.querySelector("#qui").innerHTML = "Who are you? (in French only)";
+    document.querySelector("#nom").innerHTML = "Change your name :";
+    document.querySelector("#nomest").innerHTML = "Your name is : ";
+    document.querySelector("#eleve").innerHTML = "Student";
+    document.querySelector("#dev").innerHTML = "Developers' space";
+    document.querySelector("#infos").innerHTML = "⚠ INFORMATION NOT AVAILABLE IN ENGLISH ⚠";
+    document.querySelector("#btnpartie").innerHTML = "Go to \"Who does what?\" ";
+    document.querySelector("#testversion").innerHTML = "Test the site version";
+    document.querySelector("#versionsite").innerHTML = "Site version :";
+    document.querySelector("#créerpar").innerHTML = "Created by : ";
+    document.querySelector("#déco").innerHTML = "Logout";
+    document.querySelector("#").innerHTML = "";
+    document.querySelector("#").innerHTML = "";
+    document.querySelector("#").innerHTML = "";
+    document.querySelector("#").innerHTML = "";
+
+}
+document.querySelector("#Français").addEventListener("click",mod);
+document.querySelector("#Englich").addEventListener("click",unmod);
+</script>
+
+
+<script>
+function rediriger(url) {
+      window.location.href = url; // Redirection vers l'URL spécifiée
+    }
+</script>
+
+    <br><h3><span id="créerpar" >Créer par : </span><em><a href="http://g.dev/nomite" target="_blank" rel="noopener noreferrer">Noïm</a></em></h3>
+
+</body>
+</html>

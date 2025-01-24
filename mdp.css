@@ -1,0 +1,16 @@
+label {
+    display: block;
+  }
+  
+  input[type='submit'],
+  label {
+    margin-top: 1rem;
+  }
+p {
+  color: red;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 21px;
+  }

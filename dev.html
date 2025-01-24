@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev - - ITER Robot CPP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="java.js">
+    <script src='java.js' async></script>
+    <link rel="icon" href="https://image.freepik.com/icones-gratuites/balise-html_318-47329.jpg" type="image/x-icon">
+    <meta http-equiv="Refresh" content="60; url=file:///C:/Users/33613/OneDrive/code/iter/html/info.html" />
+</head>
+<body>
+    <nav>
+    <a href="#"><del>Menu</del></a>
+    <a href="info.html">Informations</a>
+    <a href="#">Dévelopeur</a>
+    <a href="#"><del>Autre</del></a>
+    <a href="listes iter robot.html">Liste à faire</a>
+    <a href="#"><del>Qui fait quoi ?</del></a>
+    <a href="#"><del>Vidéos</del></a>
+    <em><a href="index-LAPTOP-MKB55U5I.html">Sauvegarde "index.html"</a></em>
+    </nav>
+<h1>Informations - Dev</h1>
+<p>Ce site web à été créer par des élèves du Collège Le Petit Prince participants à <em>Iter Robot</em> en HTML et en CSS. <center>Mode Dévelopeur</center></p>
+<button><a href="Listerepertoir.html"><script src='java.js' async></script>Aller à la partie "Qui fait quoi ?"</a></button> <button><a href="index.html"><link rel="stylesheet" href="java.js">Pressez moi</a></button>
+
+  
+  <fieldset>
+        <legend>Qui êtes vous ?</legend>
+        <p>
+            <label class="radio-container">
+                <input class="checkmark" onclick="rediriger('info.html')" type="radio" name="option" value="regular" />Eleve
+            <span class="checkmark"></span>
+</label>
+        </p>
+        <p>
+            <label class="radio-container">
+                <input class="checkmark" type="radio" name="option" value="regular" onclick="alert('Vous êtes déjà sur l\'espace développeurs !')"checked />Développeurs site
+            <span class="checkmark"></span>
+</label>
+        </p>
+        <p>
+            <label class="radio-container">
+                <input class="checkmark" onclick="alert('Le bouton ITER Robot n\'est pas encore disponible !')" type="radio" name="option" value="disabled" disabled /> Iter Robot
+            <span class="checkmark"></span>
+</label>
+            <script>
+                function showAlert() {
+                    alert('Le bouton ITER Robot n\'est pas encore disponible !');
+                }
+            </script>
+        </p>
+    </fieldset>
+  
+  <p>
+    <label
+      >Qui est ce ? :
+      <select>
+        <option></option>
+        <optgroup label="Responsables :">
+            <option>Noïm</option>
+            <option disabled>Naïs</option>
+        </optgroup>
+        <optgroup label="Autres :">
+          <option>Louka</option>
+          <option disabled>Mathéo</option>
+          <option disabled>Timéo</option>
+          <option disabled>Titouan</option>
+          <option disabled>Lélio</option>
+          <option disabled>Marin</option>
+          <option disabled>Coline</option>
+          <option disabled>Lilian</option>
+          <option disabled>Ouvéa</option>
+        </optgroup>
+        <optgroup label="Profs">
+          <option>M. HERNANDEZ</option>
+          <option disabled>Désactivé 3.2</option>
+          <option disabled>Désactivé 3.3</option>
+        </optgroup>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label
+      >Qui est ce ? :
+      <select disabled>
+        <option>  </option>
+        <optgroup label="Responsables :">
+          <option>Noïm</option>
+          <option>Naïs</option>
+      </optgroup>
+      <optgroup label="Autres :">
+        <option>Louka</option>
+        <option>Mathéo</option>
+        <option>Timéo</option>
+        <option>Titouan</option>
+        <option>Lélio</option>
+        <option>Marin</option>
+        <option>Coline</option>
+        <option>Lilian</option>
+      </optgroup>
+      <optgroup label="Profs" disabled>
+        <option>M. HERNANDEZ</option>
+
+        </optgroup>
+      </select>
+    </label>
+  </p>
+  <br><button onclick="confirmDeconnexion()" class="btn btn-logout">Déconnexion</button>
+  <script>
+    function confirmDeconnexion() {
+        var confirmLogout = confirm("Êtes-vous sûr de vouloir vous déconnecter ?");
+        if (confirmLogout) {
+            window.location.href = "Acceuil - Plateforme de bienvenue.html";
+        }
+    }
+    </script>
+<br><br>Version du site : 3.8 (dev) <br><br>Version du mode "dev" : 1.1.7
+<br><h6><a href="test java.html">Tester la version du site</a></h6>
+
+<br><form action="info.html">  
+        Nom: <input type="text" name="Nom"  placeholder="Entrez votre nom..."><br>  
+        Prénom: <input type="text" name="Prénom" placeholder="Entrez votre prénom..."><br>  
+        <input type="submit" value="Envoyer">  
+        </form>
+        <br><br><label for="email">Email:</label><br>
+        <input type="email" id="email" name="email">
+        <button type="submit">Submit</button><br><br>
+<fieldset>
+    <legend>Cases à cocher</legend>
+    <p>
+      <label>
+        <input type="checkbox" name="chbox" value="regular" /> <a href="index.html">test</a>Activé
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="chbox" value="disabled" disabled /> désactivé
+      </label>
+    </p>
+  </fieldset>
+        <script> document.getElementById("contactForm").addEventListener("submit", function(event){ event.preventDefault(); localStorage.setItem("name", document.getElementById("name").value); localStorage.setItem("email", document.getElementById("email").value); localStorage.setItem("message", document.getElementById("message").value); alert("Données enregistrées avec succès!"); }); document.getElementById("name").value = localStorage.getItem("name"); document.getElementById("email").value = localStorage.getItem("email"); document.getElementById("message").value = localStorage.getItem("message"); </script>
+
+        <button onclick="alert('Hello, vous avez cliqué sur le bouton!')">Cliquez ici</button>
+
+        <script>
+            // Code JavaScript qui sera exécuté lors du clic sur le bouton
+            function showAlert() {
+                alert('Hello, vous avez cliqué sur le bouton!');
+            }
+        </script>
+<script>
+function rediriger(url) {
+      window.location.href = url; // Redirection vers l'URL spécifiée
+    }
+</script>
+
+
+  
+  </fieldset>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Créer par : <em>Noïm</em>, <em>Louka</em>
+</body>
+</html>

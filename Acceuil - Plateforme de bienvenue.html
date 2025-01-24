@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page d'acceuil - ITER Robot CPP</title>
+  <link rel="icon" href="https://0133381e.index-education.net/pronote/fichierurlpublique/logo.png?param=7DA3DEB97ED4E736E373FCE0BB40DB42AA2E842A40321319F0FCD50D8591C6EAC4E0E7CF302EADB8C751BD6F4A69397AEB5B6255D302015B0A495168088B836C62BA9D8A28046221EE550589493855AA" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+    .button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 5px;
+    }
+
+    .input-name {
+  display: inline-block;
+  padding: 10px;
+  width: 160px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+body{
+      background-color: #f0f0f0;
+}
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur le site ITER Robot du Collège Le Petit Prince !</h1>
+  <p>Ce site a été créé par Noïm GERAULT JOURDIN !</p>
+  <input type="text" id="inputField" class="input-name" placeholder="Entrer votre nom"  /> 
+  <a title="Vos informations ne sont enregistré que localement sur votre navigateur. Aucune de vos informations ne sont partagés." href="index.html" class="button" onclick="saveData()">Commencer</a>
+
+  <script> function saveData() { var inputValue = document.getElementById('inputField').value; localStorage.setItem('name', inputValue); document.getElementById('output').textContent = localStorage.getItem('name'); } document.getElementById('output').textContent = localStorage.getItem('name'); </script>
+
+
+
+</body>
+</html>

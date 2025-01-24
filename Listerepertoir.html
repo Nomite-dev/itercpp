@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui fait quoi ? - ITER Robot CPP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logocpp.jpeg" type="image/x-icon">
+</head>
+<body>
+    <nav>
+    <a href="index.html">Menu</a> 
+    <a href="info.html">Informations</a> 
+    <a href="autre.html">Autre</a> 
+    <a href="#">Qui fait quoi ?</a> 
+    <a href="Vidéos.html">Vidéos</a>
+    </nav>
+
+</body>
+<br>
+<input type="button" value="Imprimer" onclick="imprimerBalise('baliseSpecifique')">
+
+<script>
+    function imprimerBalise(id) {
+        var contenu = document.getElementById(id).innerHTML;
+        var fenetreImpression = window.open('', '', 'height=500,width=500');
+        fenetreImpression.document.write('<html><head><title>Impression</title></head><body>');
+        fenetreImpression.document.write(contenu);
+        fenetreImpression.document.write('</body></html>');
+        fenetreImpression.document.close();
+        fenetreImpression.print();
+    }
+</script>
+<br>
+<div id="baliseSpecifique">
+
+<Ol>
+<h2>Coordinateurs :</h2>
+<li>Noïm</li>
+<li>Naïs</li>
+<h2>Programation :</h2>
+<li>Noïm</li>
+<li>Louka</li>
+<li>Naïs</li>
+<li>Lilian</li>
+<li>Ouvéa</li>
+<h2>Organigramme</h2>
+<li>Mathéo</li>
+<li>Naïs</li>
+<h2>Communication</h2>
+<li>Marin</li>
+<li>Timéo</li>
+<li>Noïm</li>
+<li>Coline</li>
+<li>Lélio</li>
+<h2>Culture générale</h2>
+<li>Titouan</li>
+<li>Mathéo</li>
+<h2>Dossier technique</h2>
+<li>Coline</li>
+<li>Louka</li>
+<li>(Noïm)</li>
+<h2>Power Point</h2>
+<li>Naïs</li>
+<li>Ouvéa</li>
+</Ol>
+</div>
+<br><br><p><strong>Rechercher : Qui fait quoi ?</strong></p>
+<input
+  type="Que faire"
+  multiple
+  name="postes"
+  id="postes"
+  list="dwarfemails"
+  required
+  size="64" />
+<datalist id="dwarfemails">
+    <option value="Coordinateurs">Noïm, Naïs</option>
+    <option value="Communication"><strong>Noïm</strong>, Marin, Timéo, Coline, Lélio</option>
+    <option value="Robotique / Programation"><a href="dev.html">Noïm</a>, Louka, Naïs, Lilian, Ouvéa</option>
+    <option value="Dossier Technique">Louka, Coline, Noïm</option>
+    <option value="Culture Générale">Titouan, Mathéo</option>
+    <option value="Organigramme">Mathéo, Naïs</option>
+    <option value="Power Point">Naïs, (Ouvéa)</option>
+  </datalist>
+</body>
+</html>

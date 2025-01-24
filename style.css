@@ -1,0 +1,276 @@
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+
+}
+nav {
+    margin-left: 200px;
+}
+
+.nav{
+    height: 27px;
+    width: 100%;
+    background-color: rgba(240, 143, 108, 0.753)  
+}
+nav a{
+margin-right: 10px;
+font-size: 21px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 21px;
+}
+.nameis{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+p{
+    font-size: 20px;
+    
+}
+li{
+    font-size: 20px;
+    color: black;
+}
+button{
+    color: black;
+    background-color: rgb(196, 255, 245);
+}
+.img{
+    rotate: 270deg;
+}
+em {
+    color: crimson;
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid red;
+    color: red;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn:hover {
+    background-color: red;
+    color: white;
+  }
+  
+  .arouge {
+    color: red;
+    padding: 10px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+  }
+  .arouge:hover {
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+.btn3 {
+    display: inline-block;
+    width: 260px; /* Largeur fixe pour les boutons carrés */
+    height: 170px; /* Hauteur fixe pour les boutons carrés */
+    font-size: 16px; /* Ajuster la taille de la police si nécessaire */
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 10px; /* Coins légèrement arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px; /* Réduit l'espace entre les boutons */
+}
+
+.btn3:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn3:active {
+    background-color: #004080;
+    transform: translateY(0);
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les boutons horizontalement */
+    gap: 5px; /* Réduit l'espace entre les boutons */
+}
+
+
+.btn3-disabled {
+    display: inline-block;
+    width: 260px; /* Largeur fixe pour les boutons carrés */
+    height: 170px; /* Hauteur fixe pour les boutons carrés */
+    font-size: 16px; /* Ajuster la taille de la police si nécessaire */
+    color: #fff;
+    background-color: #D3D3D3;
+    border: none;
+    border-radius: 10px; /* Coins légèrement arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px; /* Réduit l'espace entre les boutons */
+}
+
+.btn3-disabled:hover {
+    background-color: #D3D3D3;
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* CSS pour le radio */
+  .radio-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  .radio-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: hidden;
+  }
+  
+  .radio-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .radio-label {
+    margin-left: 35px;
+    font-size: 16px;
+  }
+  
+  .radio-container input:disabled ~ .checkmark {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .radio-container input:disabled ~ .checkmark:after {
+    background-color: #999;
+  }
+
+/* Style du texte à côté du radio */
+.radio-label {
+  margin-left: 35px;
+  font-size: 16px;
+}
+
+/* Style du texte lorsque le radio est désactivé */
+.radio-container input:disabled ~ .checkmark {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Style du texte lorsque le radio est désactivé */
+.radio-container input:disabled ~ .checkmark:after {
+  background-color: #999;
+}
+
+
+
+
+.input-text {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+
+
+
+
+
+/*BOUTONS :*/
+.btn-google {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4285f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-google:hover {
+  background-color: #357ae8;
+}
+
